@@ -1,12 +1,21 @@
 import React from 'react'
-import {View, Text} from 'react-native'
-import { Header } from 'react-native/Libraries/NewAppScreen'
+import {View, Text, FlatList} from 'react-native'
+import { DATA } from '../../utils/data';
 import MyHeader from './components/Header'
+import { Item } from './components/Item';
 
 const ProductList = () => {
     return(
-        <View>
-            <MyHeader/>
+        <View style={{marginHorizontal: 24}}>
+            <FlatList
+                numColumns={2}
+                data={DATA}
+                renderItem ={(item) => <Item {...item.item}/>}
+                keyExtractor = {item => item.id}
+                ListHeaderComponent={
+                    <MyHeader/>
+                }
+            ></FlatList>
         </View>
     );
 };

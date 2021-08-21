@@ -12,7 +12,7 @@ const MyHeader = () => {
                         source={require('../../../../assets/images/icone-sacola.png')} />
                 </View>
             </View>
-            <View style={styles.containerDescription}>
+            <View>
                 <View style={styles.description}>
                 </View>
                 <View style={styles.containerTextDescription}>
@@ -37,14 +37,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 24
+        paddingVertical: 24
     },
     title: {
-        // fontFamily: 'OpenSans-ExtraBold',
         fontSize: 28
-    },
-    containerDescription: {
-        paddingHorizontal: 24,
     },
     description: {
         borderWidth: 0.5,
